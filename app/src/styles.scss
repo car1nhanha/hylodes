@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./app/reset.scss);
+
+:root {
+  --gray-100: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Geist', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html,
+body,
+app-root {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  background: #f3f4f6;
+}
+
+app-root {
+  display: block;
+}

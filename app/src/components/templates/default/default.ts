@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Navbar } from '../../organisms/navbar/navbar';
 
 @Component({
-  selector: 'app-default',
-  imports: [],
+  selector: 'template-default',
+  imports: [Navbar],
   templateUrl: './default.html',
   styleUrl: './default.scss',
 })
