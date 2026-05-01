@@ -11,4 +11,14 @@
   </button>
 </div>
 
-<span>a</span>
+<div class="user-actions">
+  <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed={{ user.id }}" alt="avatar" />
+  <div class="user-info">
+    <h3>{{ user.name }}</h3>
+    <p>{{ user.email }}</p>
+  </div>
+
+  <button class="logout">
+    <ng-icon name="lucideLogOut" class="icon" />
+  </button>
+</div>

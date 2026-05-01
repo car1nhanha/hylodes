@@ -59,3 +59,53 @@
     }
   }
 }
+
+.user-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  img {
+    width: 32px;
+    height: 32px;
+
+    background: transparent;
+    border-radius: 50%;
+  }
+
+  .user-info {
+    padding-right: 16px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.005em;
+
+      color: #374151;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.015em;
+
+      color: #4b5563;
+    }
+  }
+
+  .logout {
+    all: unset;
+    height: 24px;
+    width: 24px;
+
+    color: #171717;
+  }
+}

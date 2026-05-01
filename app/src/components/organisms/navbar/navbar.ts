@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideLightbulb, lucideUsers } from '@ng-icons/lucide';
+import { lucideLightbulb, lucideLogOut, lucideUsers } from '@ng-icons/lucide';
 
 @Component({
   selector: 'organism-navbar',
   imports: [NgIcon],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
-  viewProviders: [provideIcons({ lucideLightbulb, lucideUsers })],
+  viewProviders: [provideIcons({ lucideLightbulb, lucideUsers, lucideLogOut })],
 })
-export class Navbar {}
+export class Navbar {
+  user = {
+    id: 'abcd',
+    name: 'lucas carinhanha',
+    email: 'lucascarinhanha4@gmail.com',
+  };
+}
