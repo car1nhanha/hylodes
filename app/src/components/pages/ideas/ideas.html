@@ -1,3 +1,22 @@
 <template-default>
-  <p>ideas works!</p>
+  <header>
+    <div class="left-header">
+      <atom-title>Ideas</atom-title>
+      <div class="tags-container">
+        <atom-tag color="#E9D5FF" iconName="lucideLightbulb" number="2">ideas</atom-tag>
+        <atom-tag color="#C7D2FE" iconName="lucideMessageSquare" number="6">comments</atom-tag>
+        <atom-tag color="#BBF7D0" iconName="lucideThumbsUp" number="2">Votes</atom-tag>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="order-by">
+        <span>Order by:</span>
+        <select>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="most-votes">Most Votes</option>
+        </select>
+      </div>
+    </div>
+  </header>
 </template-default>
