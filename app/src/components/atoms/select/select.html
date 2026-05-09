@@ -1,0 +1,12 @@
+<div class="label" (click)="open()">
+  <span>{{ optionSelected }}</span>
+  <ng-icon name="lucideChevronsUpDown" class="icon" />
+</div>
+
+<ul class="option {{ isOpen }}">
+  <li (click)="change('aaaaaa')">aaaaaa</li>
+  <li (click)="change('bbbbbb')">bbbbbb</li>
+  <li (click)="change('cccccc')">cccccc</li>
+  <li (click)="change('dddddd')">dddddd</li>
+  <li (click)="change('eeeeee')">eeeeee</li>
+</ul>
