@@ -15,6 +15,20 @@
     align-items: flex-start;
     gap: 12px;
   }
+
+  header .right-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    .order-by {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+  }
 }
 
 .tags-container {

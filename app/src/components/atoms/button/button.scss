@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9.5px 24px;
+  gap: 8px;
+
+  background: #4338ca;
+  border-radius: 8px;
+
+  color: #ffffff;
+  ng-icon {
+    color: #ffffff;
+  }
+}

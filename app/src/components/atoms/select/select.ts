@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideChevronsUpDown } from '@ng-icons/lucide';
 
+export interface Option {
+  title: string;
+  id: string;
+}
 @Component({
   selector: 'atom-select',
   imports: [NgIcon],
@@ -13,8 +17,11 @@ export class Select {
   optionSelected = 'select';
   isOpen: 'open' | 'close' = 'close';
 
-  change(item: string) {
-    this.optionSelected = item;
+  @Input('options') options!: Option[];
+  @Input('text-default') textDefault!: string;
+
+  change(option: Option) {
+    this.optionSelected = option.title;
     this.isOpen = 'close';
   }
 

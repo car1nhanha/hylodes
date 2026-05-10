@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 2px;
+  gap: 8px;
+  background-color: #d1d5d8;
+
+  width: 1px;
+  height: 32px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.005em;
+}

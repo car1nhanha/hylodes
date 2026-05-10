@@ -11,11 +11,12 @@
     <div class="right-header">
       <div class="order-by">
         <span>Order by:</span>
-        <select>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="most-votes">Most Votes</option>
-        </select>
+        <atom-select [options]="options" text-default="Select" />
+        <atom-separator />
+        <atom-button>
+          <ng-icon name="lucidePlus" class="icon" />
+          <span>New idea</span>
+        </atom-button>
       </div>
     </div>
   </header>
