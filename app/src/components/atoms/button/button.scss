@@ -1,4 +1,10 @@
 :host {
+  &:has(.full-width) {
+    width: 100%;
+  }
+}
+
+button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -8,9 +14,26 @@
 
   background: #4338ca;
   border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 
   color: #ffffff;
   ng-icon {
     color: #ffffff;
   }
+
+  &:hover {
+    filter: grayscale(70%);
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+button.outline {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
 }

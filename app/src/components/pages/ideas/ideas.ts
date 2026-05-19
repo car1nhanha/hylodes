@@ -6,11 +6,12 @@ import { Option, Select } from '../../atoms/select/select';
 import { Separator } from '../../atoms/separator/separator';
 import { Tag } from '../../atoms/tag/tag';
 import { Title } from '../../atoms/title/title';
+import { Idea } from '../../organisms/card/idea/idea';
 import { Default } from '../../templates/default/default';
 
 @Component({
   selector: 'app-ideas',
-  imports: [Default, Title, Tag, Select, Button, NgIcon, Separator],
+  imports: [Default, Title, Tag, Select, Button, NgIcon, Separator, Idea],
   templateUrl: './ideas.html',
   styleUrl: './ideas.scss',
   viewProviders: [

@@ -1,0 +1,28 @@
+<nav>
+  <img src="/mind-map.svg" alt="logo" />
+  <div class="text">
+    <h1>MindShare</h1>
+    <h2>Collaborative ideas</h2>
+  </div>
+</nav>
+
+<div class="cards-container">
+  <div class="card-form">
+    <div class="card-form-header">
+      <h2>{{ body.title }}</h2>
+      <p>{{ body.subtitle }}</p>
+    </div>
+    <div class="form">
+      <ng-content />
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="container-title">
+      <h3>{{ footer.title }}</h3>
+      <span>{{ footer.subtitle }}</span>
+    </div>
+    <atom-button (click)="footer.button.action()" size="full" variant="outline">{{
+      footer.button.title
+    }}</atom-button>
+  </div>
+</div>
