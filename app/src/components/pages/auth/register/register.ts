@@ -5,25 +5,25 @@ import { MoleculeInput } from '../../../molecules/input/input';
 import { Auth, BodyAuth, FooterAuth } from '../../../templates/auth/auth';
 
 @Component({
-  selector: 'app-login',
-  imports: [Auth, Button, MoleculeInput],
-  templateUrl: './login.html',
-  styleUrl: './login.scss',
+  selector: 'app-register',
+  imports: [Auth, MoleculeInput, Button],
+  templateUrl: './register.html',
+  styleUrl: './register.scss',
 })
-export class Login {
+export class Register {
   private router = inject(Router);
 
   footerAuth = {
-    title: "Don't have an account yet?",
-    subtitle: 'Register now!',
+    title: 'Do you already have an account?',
+    subtitle: 'Entre agora mesmo',
     button: {
-      action: () => this.router.navigate(['register']),
-      title: 'Create account',
+      action: () => this.router.navigate(['login']),
+      title: 'Access account',
     },
   } as FooterAuth;
 
   bodyAuth = {
-    title: 'Access the platform',
-    subtitle: 'Log in using your registered email and password.',
+    title: 'Create your account',
+    subtitle: 'Please enter your name, email address, and password.',
   } as BodyAuth;
 }

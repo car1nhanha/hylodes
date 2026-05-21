@@ -3,11 +3,11 @@
 </div>
 
 <div class="tabs">
-  <button class="active">
+  <button [class.active]="isActive('ideas')" (click)="goToIdeas()">
     <ng-icon name="lucideLightbulb" class="icon" />
     <span>Ideas</span>
   </button>
-  <button>
+  <button [class.active]="isActive('users')" (click)="goToUsers()">
     <ng-icon name="lucideUsers" class="icon" />
     <span>Users</span>
   </button>

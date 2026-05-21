@@ -1,0 +1,31 @@
+<template-default>
+  <header>
+    <div class="left-header">
+      <atom-title>Users</atom-title>
+      <div class="tags-container">
+        <atom-tag color="#c7d2fe" iconName="lucideCrown" number="2">admin</atom-tag>
+        <atom-tag color="#e9d5ff" iconName="lucideUser" number="6">menbers</atom-tag>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="right-actions">
+        <span>Find user</span>
+        <div>
+          <molecule-input placeholder="name or email" type="text" />
+        </div>
+        <atom-separator />
+        <atom-button>
+          <ng-icon name="lucidePlus" class="icon" />
+          <span>New user</span>
+        </atom-button>
+      </div>
+    </div>
+  </header>
+
+  <div class="users">
+    <card-users />
+    <card-users />
+    <card-users />
+    <card-users />
+  </div>
+</template-default>

@@ -1,3 +1,7 @@
 <template-auth [footer]="footerAuth" [body]="bodyAuth">
-  <atom-button size="full">Entrar</atom-button>
+  <div class="form">
+    <molecule-input [type]="'text'" [placeholder]="'exemplo@mail.com'" label="E-mail" />
+    <molecule-input [type]="'password'" [placeholder]="'Enter your password.'" label="Senha" />
+  </div>
+  <atom-button size="full">Login</atom-button>
 </template-auth>
