@@ -13,7 +13,7 @@
         <span>Order by:</span>
         <atom-select [options]="options" text-default="Select" />
         <atom-separator />
-        <atom-button>
+        <atom-button (action)="openCreatePopup()">
           <ng-icon name="lucidePlus" class="icon" />
           <span>New idea</span>
         </atom-button>
@@ -28,3 +28,10 @@
     <card-idea />
   </div>
 </template-default>
+
+<template-popup [class.center]="true" [isActivate]="isOpen">
+  <organism-popup (action)="save()" (close)="close()">
+    <molecule-input [label]="`Title`" [placeholder]="`Give the idea a name.`" />
+    <molecule-input [label]="`Description`" [placeholder]="`Write your idea`" />
+  </organism-popup>
+</template-popup>

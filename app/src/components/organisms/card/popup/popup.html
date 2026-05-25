@@ -1,0 +1,17 @@
+<button (click)="close.emit()">
+  <ng-icon name="lucideX" />
+</button>
+
+<header>
+  <h2>Compartilhe sua ideia</h2>
+  <p>Adicione uma nova ideia para seu time</p>
+</header>
+
+<div class="body">
+  <ng-content />
+</div>
+
+<footer>
+  <atom-button variant="outline" (action)="close.emit()">Cancel</atom-button>
+  <atom-button (action)="action.emit()">Save</atom-button>
+</footer>
