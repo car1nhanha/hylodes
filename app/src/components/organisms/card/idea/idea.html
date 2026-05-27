@@ -1,24 +1,29 @@
-<header>
-  <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed={{ user.id }}" alt="avatar" />
-  <span>{{ user.slug }}</span>
-</header>
+<div class="container" (click)="openSideIdea.emit()">
+  <header>
+    <img
+      src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed={{ user.id }}"
+      alt="avatar"
+    />
+    <span>{{ user.slug }}</span>
+  </header>
 
-<div class="body">
-  <h4>Rede Social de Livros</h4>
-  <p>Uma rede social dedicada a amantes de livros e leitura.</p>
-</div>
-
-<footer>
-  <div class="contain-button">
-    <button>
-      <ng-icon name="lucideMessageSquare" />
-      <span>0</span>
-    </button>
-    <button>
-      <ng-icon name="lucideThumbsUp" />
-      <span>1</span>
-    </button>
+  <div class="body">
+    <h4>Rede Social de Livros</h4>
+    <p>Uma rede social dedicada a amantes de livros e leitura.</p>
   </div>
 
-  <span class="time-ago">há 2 minutos</span>
-</footer>
+  <footer>
+    <div class="contain-button">
+      <button>
+        <ng-icon name="lucideMessageSquare" />
+        <span>0</span>
+      </button>
+      <button>
+        <ng-icon name="lucideThumbsUp" />
+        <span>1</span>
+      </button>
+    </div>
+
+    <span class="time-ago">há 2 minutos</span>
+  </footer>
+</div>

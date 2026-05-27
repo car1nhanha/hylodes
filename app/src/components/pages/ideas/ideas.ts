@@ -62,7 +62,7 @@ export class Ideas {
     console.log({ id });
   }
   closeIdeaDetail(id: string) {
-    this.isOpenIdeaDetail = true;
+    this.isOpenIdeaDetail = false;
     console.log({ id });
   }
 }

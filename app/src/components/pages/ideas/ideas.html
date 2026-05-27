@@ -22,10 +22,9 @@
   </header>
 
   <div class="ideas">
-    <card-idea (openSideIdea)="openIdeaDetail('1')" />
-    <card-idea (openSideIdea)="openIdeaDetail('2')" />
-    <card-idea (openSideIdea)="openIdeaDetail('3')" />
-    <card-idea (openSideIdea)="openIdeaDetail('4')" />
+    @for (item of ['1', '2', '3', '4', '5', '6', '7']; track $index) {
+      <card-idea (openSideIdea)="openIdeaDetail(item)" />
+    }
   </div>
 </template-default>
 

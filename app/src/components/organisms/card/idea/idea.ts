@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideMessageSquare, lucideThumbsUp } from '@ng-icons/lucide';
 
@@ -14,4 +14,6 @@ export class Idea {
     id: '123456',
     slug: 'car1nhanha',
   };
+
+  @Output() openSideIdea = new EventEmitter<void>();
 }
