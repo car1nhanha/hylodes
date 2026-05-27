@@ -1,0 +1,49 @@
+<button class="close">
+  <ng-icon name="lucideX" />
+</button>
+
+<header>
+  <h2>Aplicativo de Monitoramento de Saúde</h2>
+  <span
+    >Uma plataforma inovadora para acompanhar a saúde e o bem-estar dos usuários, oferecendo
+    insights personalizados e dicas de saúde.</span
+  >
+</header>
+
+<div class="body">
+  @for (item of ['1', '2', '3']; track $index) {
+    <div class="comment">
+      <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=abc" alt="avatar" />
+      <div class="details">
+        <div class="row">
+          <p class="name">João Silva {{ item }}</p>
+          <div class="actions">
+            <button>
+              <ng-icon name="lucideTrash" />
+            </button>
+            <button>
+              <ng-icon name="lucidePenBox" />
+            </button>
+          </div>
+        </div>
+        <p class="message">
+          Uma plataforma inovadora para acompanhar a saúde e o bem-estar dos usuários, oferecendo
+          insights personalizados e dicas de saúde.
+        </p>
+      </div>
+    </div>
+  }
+</div>
+
+<div class="footer">
+  <div class="footer-container">
+    <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=abcd" alt="avatar" />
+    <div class="input-section">
+      <textarea></textarea>
+      <div class="actions">
+        <div class="like"><ng-icon name="lucideThumbsUp" /> 3</div>
+        <atom-button>Comment</atom-button>
+      </div>
+    </div>
+  </div>
+</div>

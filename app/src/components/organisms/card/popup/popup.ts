@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideX } from '@ng-icons/lucide';
 import { Button } from '../../../atoms/button/button';
@@ -13,4 +13,7 @@ import { Button } from '../../../atoms/button/button';
 export class OrganismPopup {
   @Output() action = new EventEmitter<void>();
   @Output() close = new EventEmitter<void>();
+
+  @Input() title = '';
+  @Input() subtitle = '';
 }

@@ -1,0 +1,232 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+
+  position: absolute;
+  width: 544px;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+
+  background: #f9fafb;
+  box-shadow:
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  .close {
+    all: unset;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 24px;
+    top: 24px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px 32px;
+    gap: 20px;
+    isolation: isolate;
+
+    background: #f3f4f6;
+
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+
+      color: #111827;
+    }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #374151;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    padding: 32px;
+
+    .comment {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        background: #111827;
+        border-radius: 12px;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0px;
+          gap: 8px;
+          width: 100%;
+
+          .name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            color: #1f2937;
+            flex: 1;
+          }
+          .actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 4px;
+            opacity: 0;
+            transition: 0.3s;
+
+            button {
+              all: unset;
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 4px;
+
+              background: #f3f4f6;
+              border: 1px solid #e5e7eb;
+              border-radius: 4px;
+
+              ng-icon {
+                color: #374151;
+                size: 14px;
+              }
+            }
+          }
+        }
+
+        .message {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: 0.005em;
+          color: #4b5563;
+        }
+      }
+
+      &:hover .details .row .actions {
+        opacity: 1;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 20px;
+
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 10px;
+      width: 100%;
+
+      img {
+        width: 24px;
+        height: 24px;
+
+        background: #111827;
+        border-radius: 12px;
+      }
+      .input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 10px;
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          height: 72px;
+          padding: 8px;
+
+          background: #f9fafb;
+          border: 1px solid #d1d5db;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+          border-radius: 8px;
+
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: 0.005em;
+          color: #6b7280;
+        }
+
+        .actions {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 0px;
+          gap: 10px;
+          width: 100%;
+
+          .like {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 5.5px 12px;
+            gap: 6px;
+
+            min-height: 32px;
+
+            background: rgba(255, 255, 255, 0.0001);
+            border: 1px solid #e5e7eb;
+            box-shadow:
+              0px 1px 3px rgba(0, 0, 0, 0.1),
+              0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: none;
+            cursor: pointer;
+
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            color: #111827;
+
+            ng-icon {
+              color: #16a34a;
+            }
+          }
+        }
+      }
+    }
+  }
+}

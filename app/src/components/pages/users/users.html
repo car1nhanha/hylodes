@@ -14,7 +14,7 @@
           <molecule-input placeholder="name or email" type="text" />
         </div>
         <atom-separator />
-        <atom-button>
+        <atom-button (action)="openCreatePopup()">
           <ng-icon name="lucidePlus" class="icon" />
           <span>New user</span>
         </atom-button>
@@ -29,3 +29,15 @@
     <card-users />
   </div>
 </template-default>
+
+<template-popup [class.center]="true" [isActivate]="isOpenNewUser">
+  <organism-popup
+    (action)="save()"
+    (close)="close()"
+    title="Add a new user"
+    subtitle="Enter name, email and permission"
+  >
+    <molecule-input [label]="`Name`" placeholder="Enter full name" />
+    <molecule-input [label]="`Email`" placeholder="email@example.com" />
+  </organism-popup>
+</template-popup>

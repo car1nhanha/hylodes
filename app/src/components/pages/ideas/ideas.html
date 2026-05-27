@@ -22,16 +22,25 @@
   </header>
 
   <div class="ideas">
-    <card-idea />
-    <card-idea />
-    <card-idea />
-    <card-idea />
+    <card-idea (openSideIdea)="openIdeaDetail('1')" />
+    <card-idea (openSideIdea)="openIdeaDetail('2')" />
+    <card-idea (openSideIdea)="openIdeaDetail('3')" />
+    <card-idea (openSideIdea)="openIdeaDetail('4')" />
   </div>
 </template-default>
 
-<template-popup [class.center]="true" [isActivate]="isOpen">
-  <organism-popup (action)="save()" (close)="close()">
+<template-popup [class.center]="true" [isActivate]="isOpenNewIdea">
+  <organism-popup
+    (action)="save()"
+    (close)="closeCreatePopup()"
+    title="Share your idea"
+    subtitle="Add a new idea to your team"
+  >
     <molecule-input [label]="`Title`" [placeholder]="`Give the idea a name.`" />
     <molecule-input [label]="`Description`" [placeholder]="`Write your idea`" />
   </organism-popup>
+</template-popup>
+
+<template-popup [class.left]="true" [isActivate]="isOpenIdeaDetail">
+  <organism-side-idea (close)="closeIdeaDetail('1')" />
 </template-popup>

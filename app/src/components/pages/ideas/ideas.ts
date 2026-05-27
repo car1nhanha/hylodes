@@ -9,6 +9,7 @@ import { Title } from '../../atoms/title/title';
 import { MoleculeInput } from '../../molecules/input/input';
 import { Idea } from '../../organisms/card/idea/idea';
 import { OrganismPopup } from '../../organisms/card/popup/popup';
+import { SideIdea } from '../../organisms/side-idea/side-idea';
 import { Default } from '../../templates/default/default';
 import { Popup } from '../../templates/popup/popup';
 
@@ -26,6 +27,7 @@ import { Popup } from '../../templates/popup/popup';
     Popup,
     OrganismPopup,
     MoleculeInput,
+    SideIdea,
   ],
   templateUrl: './ideas.html',
   styleUrl: './ideas.scss',
@@ -34,7 +36,9 @@ import { Popup } from '../../templates/popup/popup';
   ],
 })
 export class Ideas {
-  isOpen = false;
+  isOpenNewIdea = false;
+  isOpenIdeaDetail = false;
+
   options = [
     { id: 'aaa', title: 'aaaaa' },
     { id: 'bbb', title: 'bbbbb' },
@@ -44,14 +48,21 @@ export class Ideas {
   save() {
     alert('is saving');
   }
-  close() {
-    this.isOpen = false;
-  }
 
   openCreatePopup() {
-    this.isOpen = true;
+    this.isOpenNewIdea = true;
   }
   closeCreatePopup() {
-    this.isOpen = true;
+    this.isOpenNewIdea = false;
+  }
+
+  openIdeaDetail(id: string) {
+    this.isOpenIdeaDetail = true;
+    // passar o id na rota
+    console.log({ id });
+  }
+  closeIdeaDetail(id: string) {
+    this.isOpenIdeaDetail = true;
+    console.log({ id });
   }
 }
